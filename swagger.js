@@ -5,7 +5,7 @@ const doc = {
     title: "Airplane Museum API",
     description: "API for managing airplanes and museums",
   },
-  host: "https://airplane-museum-api.onrender.com",
+  host: "airplane-museum-api.onrender.com",
   schemes: ["https"],
 };
 
