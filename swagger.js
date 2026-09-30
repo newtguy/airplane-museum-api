@@ -5,8 +5,8 @@ const doc = {
     title: "Airplane Museum API",
     description: "API for managing airplanes and museums",
   },
-  host: "localhost:8080",
-  schemes: ["http"],
+  host: "https://airplane-museum-api.onrender.com",
+  schemes: ["https"],
 };
 
 const outputFile = "./swagger-output.json";

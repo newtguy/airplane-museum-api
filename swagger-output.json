@@ -5,10 +5,10 @@
     "description": "API for managing airplanes and museums",
     "version": "1.0.0"
   },
-  "host": "localhost:8080",
+  "host": "https://airplane-museum-api.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/airplanes/": {
@@ -244,7 +244,10 @@
                 "description": {
                   "example": "any"
                 },
-                "yearEstablished": {
+                "website": {
+                  "example": "any"
+                },
+                "founded": {
                   "example": "any"
                 }
               }
@@ -325,7 +328,10 @@
                 "description": {
                   "example": "any"
                 },
-                "yearEstablished": {
+                "website": {
+                  "example": "any"
+                },
+                "founded": {
                   "example": "any"
                 }
               }
