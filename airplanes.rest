@@ -1,0 +1,71 @@
+### Get all airplanes
+GET http://localhost:8080/airplanes/
+
+### Create an airplane
+POST http://localhost:8080/airplanes/
+Content-Type: application/json
+
+{
+    "name": "Bf 109 G-6",
+    "manufacturer": "Messerschmitt",
+    "model": "Bf 109 G-6",
+    "country": "Germany",
+    "year": 1943,
+    "category": "Fighter",
+    "crew": 1,
+    "museumId": "123456789012345678901234"
+}
+
+### Create an airplane
+POST http://localhost:8080/airplanes/
+Content-Type: application/json
+
+{
+    "name": "P-38L Lightning",
+    "manufacturer": "Lockheed",
+    "model": "P-38L",
+    "country": "United States",
+    "year": 1944,
+    "category": "Fighter",
+    "crew": 1,
+    "museumId": "123456789012345678901234"
+}
+
+### Get one airplane
+GET http://localhost:8080/airplanes/6ab7dd4191e217e7149fe101
+
+### Get one airplane with ID that does not exist (returns 404)
+GET http://localhost:8080/airplanes/000000000000000000000000
+
+### Get one airplane with invalid ID (returns 400)
+GET http://localhost:8080/airplanes/01234
+
+### Update an airplane (204 No Content is successful)
+PUT http://localhost:8080/airplanes/6aba7ca5212c1bbb5475a3cf
+Content-Type: application/json
+
+{
+    "name": "Bf 109 G-10",
+    "manufacturer": "Messerschmitt",
+    "model": "Bf 109 G-10",
+    "country": "Germany",
+    "year": 1945,
+    "category": "Fighter",
+    "crew": 1,
+    "museumId": "123456789012345678901234"
+}
+
+### Update an airplane with ID that does not exist (returns 404)
+PUT http://localhost:8080/airplanes/000000000000000000000000
+Content-Type: application/json
+
+{
+    "name": "Fake plane",
+    "manufacturer": "Fake",
+    "model": "Fake model",
+    "country": "Fake country",
+    "year": 1945,
+    "category": "Fighter",
+    "crew": 1,
+    "museumId": "123456789012345678901234"
+}

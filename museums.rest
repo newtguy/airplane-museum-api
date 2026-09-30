@@ -1,0 +1,38 @@
+### GET all museums
+GET http://localhost:8080/museums
+
+
+### GET one museum
+GET http://localhost:8080/museums/6abd17005a9115c3dcdfb200
+
+
+### CREATE a new museum
+POST http://localhost:8080/museums
+Content-Type: application/json
+
+{
+  "name": "National Naval Aviation Museum",
+  "location": "Pensacola, Florida",
+  "country": "United States",
+  "description": "A museum dedicated to preserving and displaying the history of United States naval aviation.",
+  "website": "https://navalaviationmuseum.org/",
+  "founded": 1962
+}
+
+
+### UPDATE a museum
+PUT http://localhost:8080/museums/6abd17005a9115c3dcdfb200
+Content-Type: application/json
+
+{
+  "name": "National Museum of the United States Air Force",
+  "location": "Dayton, Ohio",
+  "country": "United States",
+  "description": "A museum dedicated to the history and preservation of military aviation and the United States Air Force.",
+  "website": "https://www.nationalmuseum.af.mil/",
+  "founded": 1923
+}
+
+
+### DELETE a museum
+DELETE http://localhost:8080/museums/6abd17005a9115c3dcdfb200
