@@ -3,6 +3,8 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 const swaggerUi = require("swagger-ui-express");
 const swaggerDocument = require("./swagger-output.json");
+const passport = require("passport");
+const session = require("express-session");
 
 const app = express();
 
