@@ -17,7 +17,7 @@
           "Airplanes"
         ],
         "summary": "Get all airplanes",
-        "description": "Returns a list of all airplanes in the museum collection.",
+        "description": "Returns a list of all airplanes in the museum collection. Authentication required.",
         "responses": {
           "200": {
             "description": "OK"
@@ -32,7 +32,7 @@
           "Airplanes"
         ],
         "summary": "Create a new airplane",
-        "description": "Adds a new airplane to the museum collection.",
+        "description": "Adds a new airplane to the museum collection. Authentication required.",
         "parameters": [
           {
             "name": "body",
@@ -74,6 +74,9 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
           },
           "500": {
             "description": "Internal Server Error"
@@ -116,7 +119,7 @@
           "Airplanes"
         ],
         "summary": "Update an airplane",
-        "description": "Replaces an existing airplane with the provided airplane information.",
+        "description": "Replaces an existing airplane with the provided airplane information. Authentication required.",
         "parameters": [
           {
             "name": "id",
@@ -165,6 +168,9 @@
           "400": {
             "description": "Bad Request"
           },
+          "401": {
+            "description": "Unauthorized"
+          },
           "404": {
             "description": "Not Found"
           },
@@ -178,7 +184,7 @@
           "Airplanes"
         ],
         "summary": "Delete an airplane",
-        "description": "Deletes an existing airplane from the museum collection.",
+        "description": "Deletes an existing airplane from the museum collection. Authentication required.",
         "parameters": [
           {
             "name": "id",
@@ -193,6 +199,9 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
           },
           "404": {
             "description": "Not Found"
@@ -224,7 +233,7 @@
           "Museums"
         ],
         "summary": "Create a new museum",
-        "description": "Adds a new museum to the collection.",
+        "description": "Adds a new museum to the collection. Authentication required.",
         "parameters": [
           {
             "name": "body",
@@ -260,6 +269,9 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
           },
           "500": {
             "description": "Internal Server Error"
@@ -302,7 +314,7 @@
           "Museums"
         ],
         "summary": "Update a museum",
-        "description": "Replaces an existing museum with the provided museum information.",
+        "description": "Replaces an existing museum with the provided museum information. Authentication required.",
         "parameters": [
           {
             "name": "id",
@@ -345,6 +357,9 @@
           "400": {
             "description": "Bad Request"
           },
+          "401": {
+            "description": "Unauthorized"
+          },
           "404": {
             "description": "Not Found"
           },
@@ -358,7 +373,7 @@
           "Museums"
         ],
         "summary": "Delete a museum",
-        "description": "Deletes an existing museum from the collection.",
+        "description": "Deletes an existing museum from the collection. Authentication required.",
         "parameters": [
           {
             "name": "id",
@@ -374,8 +389,70 @@
           "400": {
             "description": "Bad Request"
           },
+          "401": {
+            "description": "Unauthorized"
+          },
           "404": {
             "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/auth/github": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/auth/github/callback": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/auth/status": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/auth/test-protected": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/auth/logout": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
           },
           "500": {
             "description": "Internal Server Error"
